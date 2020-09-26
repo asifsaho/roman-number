@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import numberToRomanConverter from "./numberConverter";
+import { RomanNumerals } from "./RomanNumerals";
+import isRoman from "./RomanNumerals/isRoman";
 
 const NumberInput = () => {
   const [input, setInput] = useState("");
@@ -10,7 +11,11 @@ const NumberInput = () => {
 
   const convertNumber = (event) => {
     event.preventDefault();
-    const output = numberToRomanConverter(Number(input));
+    if (isRoman(input)) {
+      RomanNumerals.fromRoman(input);
+    }
+
+    const output = RomanNumerals.toRoman(Number(input));
     setOutput(output);
   };
 
