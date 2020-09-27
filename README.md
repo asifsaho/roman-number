@@ -2,6 +2,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## to run the project please run the following script
 
-### `yarn install`
+install dependencies `yarn install`
 
-### `yarn start`
+run the project in browser `yarn start`
+
+## user instruction
+
+the input field accepts both roman and the normal number. if you input 1989 it will return MCMLXXXIX and vice versa.
